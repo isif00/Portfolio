@@ -1,0 +1,82 @@
+<html>
+
+<head>
+    <title>My first website !</title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width-device-width, initial-scale=1">
+</head>
+
+<body>
+    <section id="banner">
+        <div class="navbar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Download</a></li>
+                <li><a href="#">Offers</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">About</a></li>
+                
+            </ul>
+        </div> 
+
+        <div class="content">
+            <h1>Hello World!</h1>
+
+            <p>Hello everyone this my website please like this 
+                tweet and comment to get the code !
+            </p>
+
+            <button type="button"><span></span><a href="#" ></a>ReTweet</button>
+            <button type="button"><span></span><a href="#" ></a>Like</button>
+        </div>
+
+        <div id="sideNav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Download</a></li>
+                <li><a href="#">Offers</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </div>
+
+        <div id="menuIcon">
+            <img src="css/images/menu(2).png" id="menu">
+
+        </div>
+        <script>
+            var menuIcon = document.getElementById("menuIcon")
+            var sideNav = document.getElementById("sideNav")
+            var menu = document.getElementById("menu")
+
+            menuIcon.onclick = function(){
+                if(sideNav.style.right == "-250px")
+                {
+                    sideNav.style.right = "0";
+                }
+                else{
+                    sideNav.style.right = "-250px";
+                }
+            }
+        </script>
+
+    </section>
+
+    <section id="feature">
+        <div class="title-text">
+            <h1>FEATURES</h1>
+            <p>Why Chose Me ?</p> 
+        </div>
+        
+        <div class="feature-box">
+            <div id="features">
+                <h1>My Features</h1>
+            </div>
+        </div>
+    </section>
+
+   
+
+</body>
+
+</html>
