@@ -71,7 +71,7 @@
     line-height: 25px;
 }
 
-button{
+.content button{
     width: 200px;
     padding: 15px 0;
     text-align: center;
@@ -86,7 +86,7 @@ button{
     overflow: hidden;
 }
 
-span{
+.content span{
     border-radius: 25px;
     background: #009680;
     height: 100%;
@@ -98,86 +98,18 @@ span{
     transition: 0.5s;
 }
 
-button:hover span{
+.content button:hover span{
     width: 100%;
 }
 
-button:hover{
+.content button:hover{
     border: none;
-}
-
-#sideNav{
-  
-    width: 200px;
-    height: 100vh;
-    background: rgba(0, 150, 128, 0.2);
-    position: fixed;
-    top: 0;
-    right: -250;
-    padding: 0px 20;
-    z-index: 2;
-    transition: 0.5s;
-}
-#sideNav:hover{
-  
-    right: 250;
-
-}
-
-#sideNav ul li{
-    list-style: none;
-    display: block;
-    margin: 80px;
-    position: relative;
-    justify-content: flex-end;
-}
-
-#sideNav ul li a{
-    text-decoration: none;
-    color: #fff;
-    text-transform: capitalize;
-    justify-content: center;
-
-}
-
-#sideNav ul li::after{
-    content: '';
-    height: 3px;
-    width: 0;
-    background-color: #009680;
-    position: absolute;
-    left: 0;
-    bottom: -10px;
-    transition: 0.5s;
-}
-    
-#sideNav ul li:hover::after{
-        width: 100%;
-
-}
-
-#menuIcon{
-    width: 30px;
-    height: 30px;
-    text-align: center;
-    position: fixed;
-    right: 30px;
-    top: 20px;
-    border-radius: 3px;
-    z-index: 3;
-    cursor: pointer;
-}
-#menuIcon img{
-    width: 30px;
-    height: 30px;
-    margin-top: 0px;
 }
 
 #feature{
     width: 100%;
     padding: 30px 0;
 
-   
 }
 
 .title-text h1{
@@ -219,42 +151,27 @@ button:hover{
     padding-bottom: 100px;
 }
 
-.container .item-1{
-    background-color: #009680;
-    height: 400px;
+.container button{
     width: 400px;
+    height: 400px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
     border-radius: 50%;
-    margin: 20px;
+    font-weight: bold;
     border: 2px solid #009680;
+    background: transparent;
+    color: black;
+    cursor: pointer;
+    position: relative;
     overflow: hidden;
-}
-
-.container .item-2{
-
-    background-color: #009680;
-    height: 400px;
-    width: 400px;
-    border-radius: 50%;
-    margin: 20px;
-
-}
-
-
-.container .item-3{
-
-    background-color: #009680;
-    height: 400px;
-    width: 400px;
-    border-radius: 50%;
-    margin: 20px;
-
 }
 
 .container span{
     border-radius: 50%;
     background: #009680;
-    height: 100%;
     width: 0;
+    height: 0;
     position: absolute;
     left: 0;
     bottom: 0;
@@ -262,14 +179,42 @@ button:hover{
     transition: 0.5s;
 }
 
-.item-1:hover span{
+.container img{
+    position: absolute;
+    height: 110px;
+    width: 110px;
+    top: 10%;
+    left: 36%;
+    transition: 0.5s;
+    
+}
+
+.container button:hover span{
+    height: 100%;
     width: 100%;
 }
 
-.item-1:hover{
+.container button:hover .dark-logo{
+    display: none;
+}
+
+.container button:hover{
+    color: #fff;
     border: none;
 }
 
+.container button .text h1{
+    padding-top: 50px;
+    align-items: center;
+    margin: 18px;
+    font-size: 25px;
+}
+
+.container button .text p{
+    align-items: center;
+    margin: 18px;
+    font-size: 15px;
+}
 
 
 @media  screen and (max-width: 770px) {
