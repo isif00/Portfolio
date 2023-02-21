@@ -3,6 +3,7 @@
 <head>
     <title>My first website !</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="behaviours.js" defer></script>
     <meta name="viewport" content="width-device-width, initial-scale=1">
 </head>
 
@@ -11,25 +12,23 @@
         <div class="navbar">
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="#">Download</a></li>
-                <li><a href="#">Offers</a></li>
-                <li><a href="#">News</a></li>
+                <li><a href="#">Github</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Itch.io</a></li>
                 <li><a href="#">About</a></li>
                 
             </ul>
         </div> 
 
         <div class="content">
-            <h1>Hello World!</h1>
+            <h1>Salmi Sifeddine</h1>
+            <p>Motivated student working toward his bachelor degree in computer science.</p>
 
-            <p>Hello everyone this my website please like this 
-                tweet and comment to get the code !
-            </p>
-
-            <button type="button"><span></span><a href="#" ></a>ReTweet</button>
-            <button type="button"><span></span><a href="#" ></a>Like</button>
+   
+            <button id="skills" type="button"><span></span></a>skills</button>
+            <button id="projects" type="button"><span></span>Projects</button>
         </div>
-
+    </section>
         <div id="sideNav">
             <ul>
                 <li><a href="#">Home</a></li>
@@ -44,36 +43,24 @@
             <img src="css/images/menu(2).png" id="menu">
 
         </div>
-        <script>
-            var menuIcon = document.getElementById("menuIcon")
-            var sideNav = document.getElementById("sideNav")
-            var menu = document.getElementById("menu")
-
-            menuIcon.onclick = function(){
-                if(sideNav.style.right == "-250px")
-                {
-                    sideNav.style.right = "0";
-                }
-                else{
-                    sideNav.style.right = "-250px";
-                }
-            }
-        </script>
 
     </section>
 
     <section id="feature">
         <div class="title-text">
-            <h1>FEATURES</h1>
-            <p>Why Chose Me ?</p> 
+            <h1>skills</h1>
+            <p>What can I do ?</p> 
+        </div>
+
+        <div class="container">
+            <div class="item-1"><span></span></div>
+            <div class="item-2"></div>
+            <div class="item-3"></div>
         </div>
         
-        <div class="feature-box">
-            <div id="features">
-                <h1>My Features</h1>
-            </div>
-        </div>
+
     </section>
+
 
    
 

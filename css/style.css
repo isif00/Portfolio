@@ -1,6 +1,6 @@
 *{
-    margin: 0;
     padding: 0;
+    margin: 0;
     font-family: comfortaa;
 }
 
@@ -175,18 +175,14 @@ button:hover{
 
 #feature{
     width: 100%;
-    padding: 70px 0;
-    font-size: 40;
-    text-align: center;
+    padding: 30px 0;
+
    
 }
 
-section {
-    background-color: rgba(138, 135, 138, 0.434);
-  }
 .title-text h1{
-   margin: 30px;
-   font-size: 60;
+   margin: 20px;
+   font-size: 30;
    color: #009680;
    font-weight: bold; 
    text-align: center;
@@ -198,6 +194,82 @@ section {
     font-weight: bold; 
     text-align: center;
  }
+
+
+
+.features-text{
+    flex-basis: 50%;
+}
+
+
+.features h1{
+    text-align: left;
+    color: #009680;
+}
+
+.features p{
+    text-align: left;
+    margin-left: 10%;
+    margin-top: 5%;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 100px;
+}
+
+.container .item-1{
+    background-color: #009680;
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    margin: 20px;
+    border: 2px solid #009680;
+    overflow: hidden;
+}
+
+.container .item-2{
+
+    background-color: #009680;
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    margin: 20px;
+
+}
+
+
+.container .item-3{
+
+    background-color: #009680;
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    margin: 20px;
+
+}
+
+.container span{
+    border-radius: 50%;
+    background: #009680;
+    height: 100%;
+    width: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.item-1:hover span{
+    width: 100%;
+}
+
+.item-1:hover{
+    border: none;
+}
+
 
 
 @media  screen and (max-width: 770px) {
