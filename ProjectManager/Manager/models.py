@@ -6,7 +6,7 @@ class Projects(models.Model):
     title = models.CharField(max_length=250)
     description = models.CharField(max_length=250, default="")
     image = models.ImageField(upload_to="user-images")
-    link = models.CharField(max_length=250)
+    link = models.URLField(max_length=200)
     publish_date = models.DateField(auto_now_add=True)
 
     class Meta:
