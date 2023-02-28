@@ -7,6 +7,6 @@
   - `pip install -r requirelents.txt` 
 
 ## Running
-  - `py manage.py runserver.py`
+  - `python3 manage.py runserver.py`
   
   
