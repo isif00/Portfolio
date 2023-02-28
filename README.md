@@ -1,10 +1,12 @@
 ## Portfolio
   - a simple portfolio website using HTML & CSS & JS 
   - Project Managemnts app using Django
-  - sqlite for database database 
+  - sqlite for database 
  
 ## Installation
-  `pip install -r requirelents.txt`
-  `py manage.py runserver.py`
+  - `pip install -r requirelents.txt` 
+
+## Running
+  - `py manage.py runserver.py`
   
   
