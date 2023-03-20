@@ -13,9 +13,11 @@
     <section id="banner">
         <div class="navbar">
             <ul>
-                <li><a href="https://github.com/isif00">Github</a></li>
-                <li><a href="https://twitter.com/sifodz18">Twitter</a></li>
-                <li><a href="https://salmisifeddine.itch.io/">Itch.io</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Github</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Itch.io</a></li>
+                <li><a href="#">About</a></li> 
             </ul>
         </div> 
 
@@ -80,41 +82,22 @@
     </section>
 
     <section>
-
         <div class="title-text">
             <h1>Projects</h1>
             <p>What did I build ?</p> 
         </div>
 
-        <div class="projects-container">
-            {% for project in projects %}
-                        <button onclick="window.open('{{ project.link }}', '_blank')" id="project" type="button">
-                            <img src="{{ project.image.url }}">
-                            <h1>{{ project.title }}</h1>
-                            <p>{{ project.description }}</p>
-                        </button>
-            {% endfor %}
-        </div>
+        {% for project in projects %}
+            <div class="projects-container">
 
-    </section>
-
-    <section>
-        <div class="footer">
-            <div class="min-footer">
-                <div class="title-text-footer">
-                    <h1>Contact</h1>
-                    <p>Get closer !</p> 
-                </div>
-
-                <div class="contact-info">
-                    <h1>email : sifodev@gmail.com</h1>
-                    <h1>Phone : +213 793531759</h1>
-                </div>
-
+                    <button onclick="window.open('{{ project.link }}', '_blank')" id="project" type="button">
+                        <img src="{{ project.image.url }}">
+                        <h1>{{ project.title }}</h1>
+                        <p>{{ project.description }}</p>
+                    </button>
             </div>
-        </div>
+        {% endfor %}
     </section>
-
 
    
 
