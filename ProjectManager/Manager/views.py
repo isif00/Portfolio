@@ -4,7 +4,7 @@ from .models import Projects
 
 def index(request):
     projects = Projects.objects.all()
-    return render(request, 'main/index.html', {'projects' : projects})
+    return render(request, 'main/index.html', {'projects': projects})
 
 
 def handler404(request, exception):
