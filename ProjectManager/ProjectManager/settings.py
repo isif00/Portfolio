@@ -31,8 +31,8 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOST = ['salmisifeddine']
-CSRF_TRUSTED_ORIGINS = ['https://salmisifeddine']
+ALLOWED_HOST = ['salmisifeddine.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ['https://salmisifeddine.up.railway.app']
 
 # Application definition
 
