@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 import os 
+import dj_database_url
 
 from pathlib import Path
 from dotenv import load_dotenv
@@ -31,8 +32,8 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['salmisifeddine.up.railway.app']
-CSRF_TRUSTED_ORIGINS = ['https://salmisifeddine.up.railway.app']
+ALLOWED_HOSTS = ['portfolio-production-8033.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ['https://portfolio-production-8033.up.railway.app']
 
 # Application definition
 
@@ -85,12 +86,13 @@ WSGI_APPLICATION = 'ProjectManager.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+
+DATABASE_URL = os.getenv("DATABASE_URL")
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    "default": dj_database_url.config(default=DATABASE_URL, conn_max_age=1800),
 }
+
 
 
 # Password validation
