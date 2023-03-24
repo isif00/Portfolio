@@ -3,6 +3,7 @@
 import os
 import sys
 
+from django.core import management
 
 def main():
     """Run administrative tasks."""
@@ -15,6 +16,8 @@ def main():
             "available on your PYTHONPATH environment variable? Did you "
             "forget to activate a virtual environment?"
         ) from exc
+    management.call_command("createsuperuser", username="isifoo", email="sifodev@gmail.com")
+    management.execute_from_command_line(sys.argv)
     execute_from_command_line(sys.argv)
 
 
