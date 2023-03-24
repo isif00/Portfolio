@@ -148,10 +148,3 @@ if 'DJANGO_SUPERUSER_USERNAME' in os.environ and 'DJANGO_SUPERUSER_EMAIL' in os.
     User.objects.create_superuser(os.environ['DJANGO_SUPERUSER_USERNAME'], os.environ['DJANGO_SUPERUSER_EMAIL'], os.environ['DJANGO_SUPERUSER_PASSWORD'])
 
 
-import dj_database_url
-
-DATABASE_URL = os.getenv("DATABASE_URL")
-
-DATABASES = {
-    "default": dj_database_url.config(default=DATABASE_URL, conn_max_age=1800),
-}
