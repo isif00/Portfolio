@@ -10,7 +10,6 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 import os 
-import dj_database_url
 import django
 from pathlib import Path
 from dotenv import load_dotenv
@@ -88,17 +87,12 @@ WSGI_APPLICATION = 'ProjectManager.wsgi.application'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 
-DATABASE_URL = os.getenv("DATABASE_URL")
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
-}
-
-DATABASES = {
-    "default": dj_database_url.config(default=DATABASE_URL, conn_max_age=1800),
 }
 
 
@@ -152,3 +146,12 @@ if 'DJANGO_SUPERUSER_USERNAME' in os.environ and 'DJANGO_SUPERUSER_EMAIL' in os.
     from django.contrib.auth.management.commands.createsuperuser import get_user_model
     User = get_user_model()
     User.objects.create_superuser(os.environ['DJANGO_SUPERUSER_USERNAME'], os.environ['DJANGO_SUPERUSER_EMAIL'], os.environ['DJANGO_SUPERUSER_PASSWORD'])
+
+
+import dj_database_url
+
+DATABASE_URL = os.getenv("DATABASE_URL")
+
+DATABASES = {
+    "default": dj_database_url.config(default=DATABASE_URL, conn_max_age=1800),
+}
